@@ -18,7 +18,8 @@ const Fifth = ({ form, setForm, handlePageChange }) => {
     ) {
       try {
         setLoading(true)
-        const docRef = await addDoc(collection(db, 'invites'), form)
+        const date = new Date().toString();
+        const docRef = await addDoc(collection(db, 'invites'), {...form, date})
         handlePageChange('forward')
       } catch (error) {
         console.log({ error })
