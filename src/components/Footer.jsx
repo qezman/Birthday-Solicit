@@ -8,13 +8,13 @@ const Footer = ({ handlePageChange }) => {
           onClick={() => handlePageChange('backward')}
           className={"w-8 bg-red-500 p-2 border-r rounded-bl rounded-tl"}
         >
-          <FaAngleUp className={"text-white"} />
+          <FaAngleUp className={"text-white cursor-pointer"} />
         </div>
         <div 
           onClick={() => handlePageChange('forward')}
           className={"w-8 bg-red-500 p-2 rounded-tr rounded-br"}
         >
-          <FaAngleDown className={"text-white"} />
+          <FaAngleDown className={"text-white cursor-pointer"} />
         </div>
       </div>
 

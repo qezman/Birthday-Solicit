@@ -29,10 +29,6 @@ const Fifth = ({ form, setForm, handlePageChange }) => {
               </button>
         </form>
       </div>
-      <div
-        className={"flex items-center mx-4 text-3xl gap-x-10 md:gap-x-16 lg:gap-x-20 mt-4 text-white md:text-5xl lg:text-6xl"}>
-        <BiUser/> <BiUser/> <BiUser/> <BiUser/>
-      </div>
     </section>
   )
 }

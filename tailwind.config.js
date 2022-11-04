@@ -19,7 +19,6 @@ module.exports = {
         },
       },
       backgroundImage: theme => ({
-        // 'backImg': "url('images/backImg.png')"
         'backImg': "url('images/backImgTwo.png')"
       })
 

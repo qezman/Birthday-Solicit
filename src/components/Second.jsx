@@ -1,6 +1,18 @@
 import {BiCheck} from "react-icons/all";
 
 const Second = ({ setForm, form, handlePageChange }) => {
+  const PostData = async(e) => {
+    e.preventDefault()
+    const res = await fetch("", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+
+      })
+    })
+  }
   return (
     <section className={"px-4"}>
       <div className={"flex items-start gap-x-2"}>

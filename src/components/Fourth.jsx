@@ -1,6 +1,20 @@
 import {BiCheck} from "react-icons/all";
+import {useState} from "react";
+import {createUserWithEmailAndPassword, getAuth} from "firebase/auth";
+import {getFirestore} from 'firebase/firestore'
+import app from "../Firebase";
 
 const Fourth = ({ form, setForm, handlePageChange }) => {
+
+  const db = getFirestore()
+  const auth = getAuth()
+
+  const addContact = document.querySelector('.add')
+  addContact.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+
+  })
 
   return (
     <section className={"px-4"}>

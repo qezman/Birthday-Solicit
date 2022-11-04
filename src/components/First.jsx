@@ -1,8 +1,6 @@
 import {BiCheck} from "react-icons/all";
 
 const First = ({ handlePageChange, form, setForm }) => {
-  
-
   return (
     <section className={"px-4"}>
       <div className={"flex items-center gap-x-2"}>
