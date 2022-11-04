@@ -1,4 +1,19 @@
-const End = ({ form }) => {
+import React from 'react';
+
+const End = ({ form, handlePageChange }) => {
+  React.useEffect(() => {
+    if (
+      form?.canMakeIt === true &&
+      form?.name &&
+      form?.age &&
+      form?.contact
+    ) {
+      // Don't really do anything
+    } else {
+      window.alert('Failed to reply, we\'d love to have your here. Please try again!')
+      handlePageChange('start')
+    }
+  }, [form])
   return (
     <section 
       className={"flex flex-col justify-center items-center px-4 text-indigo-700"}

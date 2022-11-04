@@ -6,15 +6,15 @@ const Footer = ({ handlePageChange }) => {
       <div className={"flex"}>
         <div 
           onClick={() => handlePageChange('backward')}
-          className={"w-8 bg-red-500 p-2 border-r rounded-bl rounded-tl"}
+          className={"cursor-pointer w-8 bg-red-500 p-2 border-r rounded-bl rounded-tl"}
         >
-          <FaAngleUp className={"text-white cursor-pointer"} />
+          <FaAngleUp className={"text-white"} />
         </div>
         <div 
           onClick={() => handlePageChange('forward')}
-          className={"w-8 bg-red-500 p-2 rounded-tr rounded-br"}
+          className={"cursor-pointer w-8 bg-red-500 p-2 rounded-tr rounded-br"}
         >
-          <FaAngleDown className={"text-white cursor-pointer"} />
+          <FaAngleDown className={"text-white"} />
         </div>
       </div>
 

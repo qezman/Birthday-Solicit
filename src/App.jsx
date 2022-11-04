@@ -85,6 +85,10 @@ const App = () => {
       if (currentPage > 0) {
         setCurrentPage(prevState => prevState - 1)
       }
+    } else if (decision === 'start') {
+      // Go back the beginning and reset everything
+      setForm({});
+      setCurrentPage(0);
     } else { // if decision is not 'forward' or 'backward' i.e 'not-available'
       setCurrentPage(-1)
     }

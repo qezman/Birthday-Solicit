@@ -1,26 +1,8 @@
 import {BiCheck} from "react-icons/all";
 import {getAuth, createUserWithEmailAndPassword} from "firebase/auth"
 import {useState} from "react";
-import app from "../Firebase";
 
 const Third = ({ form, setForm, handlePageChange }) => {
-  const [age, setAge] = useState("")
-
-  const auth = getAuth(app)
-  const signup = () => {
-    createUserWithEmailAndPassword(auth, age)
-      .then((userCredential) => {
-        const user = userCredential.user
-        console.log(user)
-        alert("Successfully created an acct")
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        // const errorMessage = error.message
-        console.log(errorCode)
-      })
-  }
-
   return (
     <section className={"px-4"}>
       <div className={"flex items-start gap-x-2"}>
