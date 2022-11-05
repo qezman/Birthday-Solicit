@@ -13,6 +13,8 @@ import Fourth from "./components/Fourth";
 import Fifth from "./components/Fifth";
 
 import Footer from "./components/Footer";
+import {Route, Routes, BrowserRouter} from "react-router-dom";
+import Dashboard from "./components/Dashboard";
 
 const pages = [
   {
@@ -37,7 +39,7 @@ const pages = [
   },
   {
     key: 5,
-    component: Fourth 
+    component: Fourth
   },
   {
     key: 6,
@@ -63,7 +65,7 @@ const App = () => {
 
   // Get the current page using the key and then alias the component property
   // key so the component starts with a capital letter as recommended by react team
-  const { component: PageComponent } = pages.find(page => page.key === currentPage)
+  const {component: PageComponent} = pages.find(page => page.key === currentPage)
 
   // Create a useCallback function to handle page change
   const handlePageChange = React.useCallback((decision) => {
@@ -95,15 +97,24 @@ const App = () => {
   }, [currentPage])
 
   return (
-    <section  className={"w-full bg-backImg flex flex-col justify-center h-screen "}>
-      <PageComponent 
-        handlePageChange={handlePageChange} 
-        form={form}
-        setForm={setForm}
-      />
-      
-      <Footer handlePageChange={handlePageChange} />
-    </section>
+    <BrowserRouter>
+      <Routes>
+        <Route path={'/'}>
+          <section className={"w-full bg-backImg flex flex-col justify-center h-screen "}>
+            <PageComponent
+              handlePageChange={handlePageChange}
+              form={form}
+              setForm={setForm}
+            />
+            <Footer handlePageChange={handlePageChange}/>
+          </section>
+        </Route>
+
+        <Route path={'/admin'}>
+          <Dashboard />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 export default App
