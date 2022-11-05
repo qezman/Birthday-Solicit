@@ -41,9 +41,9 @@ const Dashboard = () => {
       {loading ? (
         <h1 className="my-10 text-center text-2xl">Loading...</h1>
       ) : invites.length > 0 ? (
-        <table className="border-separate  w-full border border-slate-400 ...">
+        <table className="border-separate w-full border border-slate-400 ...">
           <thead>
-            <tr className={"text-lg md:text-xl lg:text-2xl"}>
+            <tr className={"text-xs md:text-xl lg:text-2xl"}>
               <th className="border border-slate-300 ...">S/N</th>
               <th className="border border-slate-300 ...">Name</th>
               <th className="border border-slate-300 ...">Age</th>
